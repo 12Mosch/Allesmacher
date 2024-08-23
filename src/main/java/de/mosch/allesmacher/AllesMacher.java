@@ -1,5 +1,6 @@
 package de.mosch.allesmacher;
 
+import de.mosch.allesmacher.block.ModBlocks;
 import de.mosch.allesmacher.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -37,6 +38,7 @@ public class AllesMacher {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -53,6 +55,10 @@ public class AllesMacher {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE_SCRAP);
             event.accept(ModItems.ENDERITE_INGOT);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ENDERITE_BLOCK);
+            event.accept(ModBlocks.ENDERITE_ORE);
         }
     }
 
