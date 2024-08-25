@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "allesmacher:enderite_block"
+    }
+  ],
+  "result": {
+    "id": "allesmacher:enderite_ingot",
+    "count": 9
+  }
+}
