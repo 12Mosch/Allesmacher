@@ -3,5 +3,7 @@
   "item.allesmacher.enderite_ingot": "Enderite Ingot",
 
   "block.allesmacher.enderite_block": "Block of Enderite",
-  "block.allesmacher.enderite_ore": "Enderite Ore"
+  "block.allesmacher.enderite_ore": "Enderite Ore",
+
+  "creative.allesmacher.allesmacher_tab": "Allesmacher"
 }
