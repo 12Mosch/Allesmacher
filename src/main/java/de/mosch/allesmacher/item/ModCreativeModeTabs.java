@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ENDERITE_ORE);
                         output.accept(ModItems.ENDERITE_INGOT);
                         output.accept(ModItems.ENDERITE_SCRAP);
+                        output.accept(ModItems.CHISEL);
                     }).build());
 
     public static void register(IEventBus eventBus) {
