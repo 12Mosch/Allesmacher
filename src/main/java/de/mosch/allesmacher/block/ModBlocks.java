@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,11 +22,18 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ENDERITE_BLOCK = registerBlock("enderite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .strength(50f, 1200f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
+
     public static final DeferredBlock<Block> ENDERITE_ORE = registerBlock("enderite_ore",
             () -> new DropExperienceBlock(UniformInt.of(5, 15),
                     BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                            .mapColor(MapColor.COLOR_PURPLE)
+                            .strength(45f, 1000f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
